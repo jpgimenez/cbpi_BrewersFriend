@@ -22,7 +22,7 @@ def brewersfriend_background_task(api):
     cbpi.notify("Brewer's Friend Error", "API key not set. Update brewersfriend_api_key parameter within System > Parameters.", type="danger", timeout=None)
     return
 
-  for i, fermenter in cbpi.cache.get("fermenter").iteritems():
+  for i, fermenter in cbpi.cache.get("fermenter").items():
     if fermenter.state is not False:
       try:
         name = fermenter.name
